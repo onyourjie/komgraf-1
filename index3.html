@@ -163,15 +163,15 @@
       frontWall.position.set(0, H / 2, D / 2);
       scene.add(frontWall);
 
-      // DINDING KIRI (x = -W/2): sisi interior menghadap +X → rotasi -90° Y
+      // DINDING KIRI (x = -W/2): sisi interior menghadap +X → rotasi +90° Y
       const leftWall = new THREE.Mesh(new THREE.PlaneGeometry(D, H), matWall);
-      leftWall.rotation.y = -Math.PI / 2;
+      leftWall.rotation.y = Math.PI / 2;
       leftWall.position.set(-W / 2, H / 2, 0);
       scene.add(leftWall);
 
-      // DINDING KANAN (x = +W/2): sisi interior menghadap -X → rotasi +90° Y
+      // DINDING KANAN (x = +W/2): sisi interior menghadap -X → rotasi -90° Y
       const rightWall = new THREE.Mesh(new THREE.PlaneGeometry(D, H), matWall);
-      rightWall.rotation.y = Math.PI / 2;
+      rightWall.rotation.y = -Math.PI / 2;
       rightWall.position.set(W / 2, H / 2, 0);
       scene.add(rightWall);
 
